@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  font-family: "Raleway", sans-serif;
+}
+.container .header {
+  width: 100%;
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .header ul {
+  display: flex;
+  flex-direction: row;
+  padding-left: 0;
+}
+.container .header ul li {
+  list-style: none;
+}
+.container .header ul li a {
+  margin: 0 10px 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #151515;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+.container .header .logo {
+  width: auto;
+}
+.container .header .logo h2 {
+  text-transform: uppercase;
+}
+.container .header .right-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .header .right-nav a {
+  text-decoration: none;
+  margin: 0 8px;
+}
+.container .header .right-nav a .icon {
+  color: yellow;
+}/*# sourceMappingURL=Navbar.css.map */
