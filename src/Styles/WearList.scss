@@ -40,11 +40,13 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: space-between;
+    justify-content: flex-start;
     .wear-card {
-      flex: 0 0 23%;
+      flex: 1 1 calc(25% - 20px);
       background-color: #fff;
       border-radius: 10px;
+      max-width: 25%;
+      box-sizing: border-box;
       padding: 0 0 16px;
       img {
         width: 100%;

@@ -1,13 +1,14 @@
 import React from 'react';
 import { ShoppingBag } from 'lucide-react'; 
+import '../Styles/CartIcon.scss'
 
 const CartIcon = ({ itemCount }) => {
   return (
-    <div>
-      <ShoppingBag/>
+    <div className='shopping-cart'>
+      <ShoppingBag className='shop'/>
 
-      {itemCount > 0 && (
-        <span>
+      {itemCount >= 0  && (
+        <span className='shopping'>
           {itemCount}
         </span>
       )}

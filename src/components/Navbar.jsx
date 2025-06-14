@@ -32,7 +32,7 @@ const MenuLinks = [
 ];
 
 function Navbar() {
-  const itemCount = 5;
+  const itemCount = 0;
   return (
     <div>
       <div className="container">
@@ -48,10 +48,10 @@ function Navbar() {
             <h2>tulos</h2>
           </div>
           <div className="right-nav">
-            <a href="#">
-              <Search className="icon" />
+            <a href="#" >
+              <Search className="search-icon" />
             </a>
-            <a href="#">
+            <a href="#" className="cartIcon">
               <CartIcon itemCount={itemCount} className="icon" />
             </a>
             <div className="login">

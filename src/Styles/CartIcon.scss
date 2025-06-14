@@ -1,0 +1,18 @@
+.shopping-cart {
+    position: relative;
+    .shop {
+        width: 20px;
+    }
+    .shopping {
+        position: absolute;
+        background-color: #000;
+        color: #fff;
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 10px;
+        top: -4px;
+        right: -4px;
+    }
+}
