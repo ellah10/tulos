@@ -45,7 +45,7 @@ function Navbar() {
             ))}
           </ul>
           <div className="logo">
-            <h2>tulos</h2>
+            <a href="#">tulos</a>
           </div>
           <div className="right-nav">
             <a href="#" >

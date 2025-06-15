@@ -16,6 +16,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 0 ;
     .nav,
     .logo,
     .right-nav {
@@ -62,9 +63,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      h2 {
+      a {
+        text-decoration: none;
         text-transform: uppercase;
-        font-weight: 700;
+        font-weight: 800;
+        font-size: 25px;
+        color: #000;
       }
     }
     .right-nav {
