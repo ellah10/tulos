@@ -1,13 +1,12 @@
-import React, { useState } from "react";
-import WearCard from "./WearCard";
-import { Repeat } from "lucide-react";
+import "../Styles/Featured.scss";
 import "../Styles/WearList.scss";
-import UnvailableWear from "./UnvailableWear";
+import WearCard from "../components/WearCard";
 
 const Wears = [
   {
     id: 1,
     category: "tshirt",
+    tag: ["t-shirt"],
     image: "/image1.webp",
     name: "Adult Ultra Cotton T-Shirt, Style G2000, Multipack",
     description: "Simple t-shirt for daily use",
@@ -17,6 +16,7 @@ const Wears = [
   {
     id: 2,
     category: "tshirt",
+    tag: ["featured", "t-shirt"],
     image: "/image2.webp",
     name: "AAthletic Men's Short Sleeve Performance T-Shirt",
     description: "Simple t-shirt for daily use",
@@ -26,6 +26,7 @@ const Wears = [
   {
     id: 3,
     category: "pants",
+    tag: ["accessories"],
     image: "/pant1.webp",
     name: "Jeans for Men Stretch Slim Fit Denim Comfort",
     description: "Classic Jacket for winter use",
@@ -53,6 +54,7 @@ const Wears = [
   {
     id: 6,
     category: "jacket",
+    tag: ["accessories"],
     image: "/jacket2.webp",
     name: "Carhartt Men's Relaxed Fit Washed Duck Sherpa",
     description: "Classic Jacket for winter use",
@@ -62,13 +64,14 @@ const Wears = [
   {
     id: 7,
     category: "tshirt",
+    tag: ["t-shirt", "new"],
     image: "/image7.webp",
     name: "Womens Basic Short Sleeve Crew Neck T Shirt",
     description: "Classic t-shirt for daily use",
     price: "$55.00",
     PromoPrice: "$60.50",
   },
-   {
+  {
     id: 8,
     category: "tshirt",
     image: "/image8.webp",
@@ -80,11 +83,12 @@ const Wears = [
   {
     id: 9,
     category: "jacket",
+    tag: ["accessories"],
     image: "/jacket1.webp",
     name: "Men's Bomber Jacket Lightweight Casual Spring Fall",
     description: "Classic Jacket for winter use",
-    price: "$250.00",
-    PromoPrice: "$287.50",
+    price: "$370.00",
+    PromoPrice: "$450.50",
   },
   {
     id: 10,
@@ -107,6 +111,7 @@ const Wears = [
   {
     id: 12,
     category: "jacket",
+    tag: ["accessories"],
     image: "/jacket3.webp",
     name: "Men's Gym Workout Full-Zip Hooded Active Sweatshirt",
     description: "Classic Jacket for winter use",
@@ -116,6 +121,7 @@ const Wears = [
   {
     id: 13,
     category: "pants",
+    tag: ["accessories"],
     image: "/pant2.webp",
     name: "Mens Lightweight Track Pants",
     description: "Classic Jacket for winter use",
@@ -124,52 +130,22 @@ const Wears = [
   },
 ];
 
-const categories = ["tshirt",  "jacket", "pants", "hoodie", "short"];
-const WearList = () => {
-  const [selectedCategory, setSelectedCategory] = useState("tshirt");
-  const filteredWears = selectedCategory
-    ? Wears.filter((wear) => wear.category === selectedCategory)
-    : Wears;
-  return (
-    <div className="wear-container">
-       <div className="about">
-        <h1>Best Clothing Collection</h1>
-        <p>Find everything you need to look and feel your best, and shop the latest men's fashion and lifestyle products.</p>
-      </div>
-      <div className="filter">
-        {categories.map((category) => (
-          <button
-            key={category}
-            className={selectedCategory === category ? "active" : ""}
-            onClick={() => setSelectedCategory(category)}
-          >
-            {category}
-          </button>
-        ))}
-        <button
-          className="repeat"
-          onClick={() => setSelectedCategory(null)} 
-        >
-          <span>
-            <Repeat />
-          </span>
-        </button>
 
-      </div>
-      {filteredWears.length === 0 ? (
-        <UnvailableWear selectedCategory={selectedCategory} /> 
-      ) : (
+function Shop() {
+  return (
+    <div>
+       <div className="wear-container">
+      <h2>
+        Get your best shopping deals with us
+      </h2>
         <div className="wear-item">
-          {filteredWears.map((wear) => (
+          {Wears.map((wear) => (
             <WearCard key={wear.id} wear={wear} />
           ))}
         </div>
-      )}
+      </div>
     </div>
   );
-};
+}
 
-
-
-
-export default WearList;
+export default Shop;

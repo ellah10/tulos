@@ -2,13 +2,13 @@ import React from 'react'
 import { LoaderCircle } from 'lucide-react';
 import "../Styles/UnvailableWear.scss"
 
-function UnvailableWear({selectedCategory}) {
+function UnvailableWear({selectedType}) {
   return (
     <div className='error-page'>
         <h2>
             No Product Available
         </h2>
-        <p>We're sorry, but there are no <strong>{selectedCategory} </strong>products matching on criteria at the moment.</p>
+        <p>We're sorry, but there are no <strong>{selectedType} </strong>products matching on criteria at the moment.</p>
         <div className="loading">
             <LoaderCircle className='loader' />
             <span>We're restocking shortly</span>

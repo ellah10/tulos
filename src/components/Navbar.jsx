@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Search } from "lucide-react";
 import CartIcon from "./CartIcon";
 import "../Styles/Navbar.scss";
@@ -7,27 +8,27 @@ const MenuLinks = [
   {
     id: 1,
     name: "home",
-    link: "/#",
+    link: "/",
   },
   {
     id: 2,
     name: "featured",
-    link: "/#",
+    link: "/featured",
   },
   {
     id: 3,
     name: "new",
-    link: "/#",
+    link: "/new",
   },
   {
     id: 4,
-    name: "acessories",
-    link: "/#",
+    name: "accessories",
+    link: "/accessories",
   },
   {
     id: 5,
     name: "shop",
-    link: "/#",
+    link: "/shop",
   },
 ];
 
@@ -40,30 +41,27 @@ function Navbar() {
           <ul className="nav">
             {MenuLinks.map((data) => (
               <li key={data.id}>
-                <a href={data.link}>{data.name} </a>
+                <Link to={data.link}>{data.name} </Link>
               </li>
             ))}
           </ul>
           <div className="logo">
-            <a href="#">tulos</a>
+            <Link to="#">tulos</Link>
           </div>
           <div className="right-nav">
-            <a href="#" >
+            <Link to="#" >
               <Search className="search-icon" />
-            </a>
-            <a href="#" className="cartIcon">
+            </Link>
+            <Link to="#" className="cartIcon">
               <CartIcon itemCount={itemCount} className="icon" />
-            </a>
+            </Link>
             <div className="login">
-              <a href="#">Login</a>
+              <Link to="#">Login</Link>
             </div>
           </div>
         </div>
       </div>
-      <div className="about">
-        <h1>Best Clothing Collection</h1>
-        <p>Find everything you need to look and feel your best, and shop the latest men's fashion and lifestyle products.</p>
-      </div>
+     
     </div>
   );
 }
